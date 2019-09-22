@@ -58,3 +58,8 @@ select min(money) from salary
 select avg(money) from salary
 select avg(money), avg(id) from salary
 
+INSERT INTO ita.user (first_name, last_name, phone, email)
+VALUES ('test', 'test', '+375292504797', 'sergio5990kruk@ya.ru');
+
+select first_name, last_name, CONCAT(first_name, '_', last_name) as full_name from user where email like '%kruk%' order by last_name
+
