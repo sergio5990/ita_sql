@@ -19,7 +19,7 @@ create table auth_user
   role     varchar(63)  null,
   user_id  int(64)      not null,
   constraint auth_user_user_id_uindex unique (user_id),
-  constraint auth_user_user_id_fk foreign key (id) references user (id)
+  constraint auth_user_user_id_fk foreign key (user_id) references user (id)
 );
 #  вставка первой записи в таблицу auth_user
 INSERT INTO ita.auth_user (login, password, role, user_id)
